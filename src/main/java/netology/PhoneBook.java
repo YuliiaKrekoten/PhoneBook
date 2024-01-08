@@ -12,7 +12,7 @@ public class PhoneBook {
 
     public int add(String name, String number) {
         contacts.put(name, number);
-        return 0;
+        return contacts.size();
     }
 
     }
