@@ -40,4 +40,14 @@ public class PhoneBookTest {
 
 
     }
+    @Test
+    public void testPrintAllNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Alice", "1234567890");
+        phoneBook.add("Bob", "9876543210");
+        phoneBook.add("Charlie", "5555555555");
+
+        String expected = "Alice\nBob\nCharlie\n";
+        assertEquals(expected, phoneBook.printAllNames());
+    }
 }
