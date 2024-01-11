@@ -2,6 +2,7 @@ package netology;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeSet;
 
 public class PhoneBook {
     private Map<String, String> contacts;
@@ -28,7 +29,12 @@ public class PhoneBook {
             return contacts.get(name);
             }
             public String printAllNames() {
-        return null;
+                TreeSet<String> sortedNames = new TreeSet<>(contacts.keySet());
+                StringBuilder sb = new StringBuilder();
+                for (String name : sortedNames) {
+                    sb.append(name).append("\n");
+                }
+                return sb.toString();
             }
 
     }
